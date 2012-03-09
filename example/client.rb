@@ -15,8 +15,8 @@ def invokeApp(uri, data)
     'Content-Type' => 'application/x-www-form-urlencoded'
   }
 
-  resp, result = http.post(parsed_uri.path, data, headers)
-  result
+  resp = http.post(parsed_uri.path, data, headers)
+  resp.body
 end
 
 
